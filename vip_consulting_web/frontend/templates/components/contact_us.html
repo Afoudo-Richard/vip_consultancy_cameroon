@@ -50,7 +50,7 @@
 
                     <div class="col-span-8 md:col-span-4">
                         <label for="last-name" class="block text-sm font-medium text-gray-700">Phone</label>
-                        <input type="text" name="phone" id="phone"
+                        <input type="number" name="phone" id="phone"
                             class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                             :class="{'border-red-600':fields.phone.isValid == false}" x-model="fields.phone.value"
                             @blur="fields.phone.validate(validationCallback)"
@@ -136,7 +136,7 @@
                     },
                 },
                 phone: {
-                    value: '',
+                    value: null,
                     rules: ["required", "integer"],
                     isValid: null,
                     errorMsg: null,
